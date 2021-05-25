@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/w3css/3/w3.css">
+<body>
+
+<!-- Navigation -->
+<nav class="w3-bar w3-black">
+  <a href="#home" class="w3-button w3-bar-item">Home</a>
+  <a href="#About us" class="w3-button w3-bar-item">About us</a>
+  <a href="#contact" class="w3-button w3-bar-item">contact</a>
+  <a href="#logout" class="w3-button w3-bar-item">logout</a>
+</nav>
+
+<!-- Slide Show -->
+<section>
+  <img class="mySlides" src="https://www.carstore.com/-/media/carstore/stores/chesterfield/chesterfield-new-720x405.ashx" style="width:100%">
+  <img class="mySlides" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/the-bugatti-chiron-is-shown-to-the-goodwood-festival-of-news-photo-1600106522.jpg?crop=0.843xw:0.667xh;0.00160xw,0.230xh&resize=980:*" style="width:100%">
+  <img class="mySlides" src="https://www.carstore.com/-/media/carstore/stores/nottingham/car-store-nottingham-exterior-810x455.ashx" style="width:100%">
+</section>
+
+<script>
+// Automatic Slideshow - change image every 3 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 3000);
+}
+</script>
+
+</body>
+</html>
+

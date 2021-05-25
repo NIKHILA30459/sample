@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1>Nikhila's Registration Form</h1>
+</head>
+<body>
+<form>
+   <br>
+       <td>
+         Name:
+       </td>
+       <td>
+       <input type="text" placeholder="Name" name="">
+       </td>
+   </br>
+   <br>
+       <td>
+         student id:
+       </td>
+       <td>
+       <input type="text" placeholder="Studentid" studentid="">
+       </td>
+   </br>
+    <br>
+    <td>
+    cellno:
+     </td>
+     <td>
+       <input type="text" placeholder="cellno" cellno="">
+    </td>
+  </br>
+   <br>
+     <td>
+       email:
+    </td>
+   <td>
+     <input type="text" placeholder="email" email="">
+  </td>
+  </br>
+<br>
+<td>
+<input type="Submit" name="">
+</td>
+</br>
+</form>
+</body>
+</html>

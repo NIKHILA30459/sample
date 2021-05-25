@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<!DOCTYPE employee SYSTEM "book.dtd">
+<book>
+<Title>SCHAND</Title>
+<author>SChand</author>
+<year>2020</year>
+<price>1500</price>
+</book>

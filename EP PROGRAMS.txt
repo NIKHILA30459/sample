@@ -1,0 +1,273 @@
+name:G.NIKHILA
+REGNO:190030459
+
+BOOK
+
+<?xml version="1.0"?>
+<!DOCTYPE book SYSTEM "book.dtd">
+<book>
+<Title>SCHAND</Title>
+<author>SChand</author>
+<year>2020</year>
+<price>1500</price>
+</book>
+
+
+DTD:
+
+<!ELEMENT book (Title,author,year,price)>
+<!ELEMENT Title (#PCDATA)>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+
+STUDENT
+
+<?xml version="1.0"?>
+<class>
+<student>
+<name>Nikhila</name>
+<ID>190030459</ID>
+<branch>CSE</branch>
+<cgpa>9</cgpa>
+</student>
+<student>
+<name>Rama</name>
+<ID>1900304999</ID>
+<branch>CSE</branch>
+<cgpa>9</cgpa>
+</student>
+<student>
+<name>jhansi</name>
+<ID>190030870</ID>
+<branch>ECE</branch>
+<cgpa>8</cgpa>
+</student>
+<student>
+<name>mahesh</name>
+<ID>190032345</ID>
+<branch>ECM</branch>
+<cgpa>10</cgpa>
+</student>
+<student>
+<name>veena</name>
+<ID>19003000</ID>
+<branch>BBA</branch>
+<cgpa>7</cgpa>
+</student>
+</class>
+
+
+XSL
+
+
+<?xml version = "1.0" encoding = "UTF-8"?>  
+<!-- xsl stylesheet declaration with xsl namespace:   
+Namespace tells the xlst processor about which   
+element is to be processed and which is used for output purpose only   
+-->   
+<xsl:stylesheet version = "1.0"   
+xmlns:xsl = "http://www.w3.org/1999/XSL/Transform">     
+<!-- xsl template declaration:    
+template tells the xlst processor about the section of xml   
+document which is to be formatted. It takes an XPath expression.   
+In our case, it is matching document root element and will   
+tell processor to process the entire document with this template.   
+-->   
+   <xsl:template match = "/">   
+      <!-- HTML tags   
+         Used for formatting purpose. Processor will skip them and browser   
+            will simply render them.   
+      -->   
+      <html>   
+         <body>  
+            <h2>student info</h2>   
+            <table border = "1">   
+               <tr bgcolor = "#9acd32">   
+                  <th>id</th>   
+                  <th>name</th>   
+                  <th>branch</th>   
+                  <th>cgpa</th>   
+               </tr>   
+               <!-- for-each processing instruction   
+               Looks for each element matching the XPath expression   
+               -->   
+              <xsl:for-each select="class/student">   
+                  <tr>   
+                     <td>   
+                        <!-- value-of processing instruction   
+                        process the value of the element matching the XPath expression   
+                        -->   
+                        <xsl:value-of select = "@id"/>   
+                     </td>   
+                     <td><xsl:value-of select = "name"/></td>   
+                     <td><xsl:value-of select = "branch"/></td>   
+                     <td><xsl:value-of select = "cgpa"/></td>  
+                     <td><xsl:value-of select = "category"/></td>   
+                  </tr>   
+               </xsl:for-each>   
+            </table>   
+         </body>   
+      </html>   
+   </xsl:template>    
+</xsl:stylesheet>  
+
+
+FOOD
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<breakfast_menu>
+		<food name="Belgian Waffles">
+		<price>$5.95</price>
+		<desc>Two of our famous Belgian Waffles with plenty of real maple syrup</desc>
+		<calories>650</calories>
+	</food>
+		<food name="Strawberry Belgian Waffles">
+		<price>$7.95</price>
+		<desc>Light Belgian waffles covered with strawberries and whipped cream</desc>
+		<calories>900</calories>
+	</food>
+		<food name="Berry-Berry Belgian Waffles">
+		<price>$8.95</price>
+		<desc>Light Belgian waffles covered with an assortment of fresh berries and whipped cream</desc>
+		<calories>900</calories>
+	</food>
+		<food name="French Toast">
+		<price>$4.50</price>
+		<desc>Thick slices made from our homemade sourdough bread</desc>
+		<calories>600</calories>
+	</food>
+		<food name="Homestyle Breakfast">
+		<price>$6.95</price>
+		<desc>Two eggs, bacon or sausage, toast, and our ever-popular hash browns</desc>
+		<calories>950</calories>
+	</food>
+</breakfast_menu>
+
+
+XSL
+
+<?xml version = "1.0" encoding = "UTF-8"?>  
+<!-- xsl stylesheet declaration with xsl namespace:   
+Namespace tells the xlst processor about which   
+element is to be processed and which is used for output purpose only   
+-->   
+<xsl:stylesheet version = "1.0"   
+xmlns:xsl = "http://www.w3.org/1999/XSL/Transform">     
+<!-- xsl template declaration:    
+template tells the xlst processor about the section of xml   
+document which is to be formatted. It takes an XPath expression.   
+In our case, it is matching document root element and will   
+tell processor to process the entire document with this template.   
+-->   
+   <xsl:template match = "/">   
+      <!-- HTML tags   
+         Used for formatting purpose. Processor will skip them and browser   
+            will simply render them.   
+      -->   
+      <html>   
+         <body>  
+            <h2>braekfast menu</h2>   
+            <table border = "1">   
+               <tr bgcolor = "#9acd32">   
+                  <th>name</th>   
+                  <th>price</th>   
+                  <th>desc</th>   
+                  <th>calories</th>   
+               </tr>   
+               <!-- for-each processing instruction   
+               Looks for each element matching the XPath expression   
+               -->   
+              <xsl:for-each select="breakfast_menu/food">   
+                  <tr>   
+                     <td>   
+                        <!-- value-of processing instruction   
+                        process the value of the element matching the XPath expression   
+                        -->   
+                        <xsl:value-of select = "@name"/>   
+                     </td>   
+                     <td><xsl:value-of select = "price"/></td>   
+                     <td><xsl:value-of select = "desc"/></td>   
+                     <td><xsl:value-of select = "calories"/></td>       
+                  </tr>   
+               </xsl:for-each>   
+            </table>   
+         </body>   
+      </html>   
+   </xsl:template>    
+</xsl:stylesheet>  
+
+
+DTD
+
+<!ELEMENT food (name,price,description,calories)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT calories (#PCDATA)>
+
+EMPLOYEE
+
+
+<?xml version="1.0"?>
+<!DOCTYPE employee SYSTEM "employee.dtd">
+<employee>
+<name>nikhila</name>
+<id>190030459</id>
+<salary>92000</salary>
+<dept>cse</dept>  		   
+   <address>vijayawada</address>
+ </employee>
+nternal DTD for employee:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE employee[
+<!ELEMENT employee (name,ID,salary,dept,address)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT ID (#PCDATA)>
+<!ELEMENT salary (#PCDATA)>
+<!ELEMENT dept (#PCDATA)>
+<!ELEMENT address (#PCDATA)>
+]>
+<employee>
+<name>nikhila</name>
+<id>190030459</id>
+<salary>92000</salary>
+<dept>cse</dept>  		   
+   <address>vijayawada</address>
+ </employee>
+
+
+
+external DTD for employee:
+
+<?xml version="1.0"?>
+<!DOCTYPE employee SYSTEM "employee.dtd">
+<employee>
+<name>nikhila</name>
+<ID>190030459</ID>
+<salary>92000</salary>
+<dept>cse</dept>  		   
+   <address>vijayawada</address>
+ </employee>
+
+
+
+dtd file:
+<!ELEMENT employee (name,ID,salary,dept,address)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT ID (#PCDATA)>
+<!ELEMENT salary (#PCDATA)>
+<!ELEMENT dept (#PCDATA)>
+<!ELEMENT address (#PCDATA)>
+
+
+
+
+
+
+
+
+
+

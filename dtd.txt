@@ -1,0 +1,8 @@
+<!ELEMENT student (regno,name,avg,dob,time,mobileno,distinction)>
+<!ELEMENT regno (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT avg (#PCDATA)>
+<!ELEMENT dob (#PCDATA)>
+<!ELEMENT time (#PCDATA)>
+<!ELEMENT mobileno (#PCDATA)>
+<!ELEMENT distinction (#PCDATA)>

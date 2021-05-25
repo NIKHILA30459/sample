@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE employee SYSTEM "employee.dtd">
+<employee>
+<name>nikhila</name>
+<id>190030459</id>
+<salary>92000</salary>
+<dept>cse</dept>  		   
+   <address>vijayawada</address>
+ </employee>
+
+
+
+
+
+
+
+

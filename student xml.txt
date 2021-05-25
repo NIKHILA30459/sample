@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<class>
+ <student id = "001"> 
+<name>ABC</name>
+<branch>CSE</branch>
+<cgpa>10</cgpa>
+<category>CRT</category>
+ </student>
+ <student id = "002"> 
+<name>jhon</name>
+<branch>CSE</branch>
+<cgpa>6</cgpa>
+<category>NON-CRT</category>
+ </student>
+ <student id = "003"> 
+<name>hema</name>
+<branch>CSE</branch>
+<cgpa>8</cgpa>
+<category>CRT</category>
+ </student>
+ <student id = "004"> 
+<name>valli</name>
+<branch>CSE</branch>
+<cgpa>9</cgpa>
+<category>CRT</category>
+ </student>
+</class>

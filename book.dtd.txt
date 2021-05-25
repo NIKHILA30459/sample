@@ -1,0 +1,36 @@
+internal DTD for book:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book[
+<!ELEMENT book (Title,author,year,price)>
+<!ELEMENT Title (#PCDATA)>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+]>
+<book>
+<Title>SCHAND</Title>
+<author>SChand</author>
+<year>2020</year>
+<price>1500</price>
+</book>
+
+
+external DTD for book:
+
+<?xml version="1.0"?>
+<!DOCTYPE book SYSTEM "book.dtd">
+<book>
+<Title>SCHAND</Title>
+<author>SChand</author>
+<year>2020</year>
+<price>1500</price>
+</book>
+
+
+dtd file:
+<!ELEMENT book (Title,author,year,price)>
+<!ELEMENT Title (#PCDATA)>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
